@@ -1,4 +1,5 @@
 package org.example.repo;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,7 +16,11 @@ public class DateBase {
     private static HashMap<UUID, Account> dateBase = new HashMap<>();
 
     public static Account getAccount(UUID uuid) {
-        return dateBase.get(uuid);
+        if (dateBase.containsKey(uuid)) {
+            return dateBase.get(uuid);
+        } else {
+            return null;
+        }
     }
 
     public static void putAccount(UUID uuid, Account account) {
