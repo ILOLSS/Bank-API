@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 import java.io.IOException;
 import java.io.StringReader;
 import java.math.BigDecimal;
-import java.util.Currency;
 import java.util.UUID;
 
 @RestController
@@ -45,121 +44,14 @@ public class AccountController {
     }
 
     @PostMapping("/put")
-    public void put(@RequestParam UUID uuid, String val, double amount) throws WrongCurrency, WrongUUID {
-        BigDecimal quantity = BigDecimal.valueOf(amount);
-        boolean is_null = false;
-        if (val.equals("AUD")) {
-            is_null = true;
-        }
-        if (val.equals("AZN")) {
-            is_null = true;
-        }
-        if (val.equals("GBP")) {
-            is_null = true;
-        }
-        if (val.equals("AMD")) {
-            is_null = true;
-        }
-        if (val.equals("BYN")) {
-            is_null = true;
-        }
-        if (val.equals("BGN")) {
-            is_null = true;
-        }
-        if (val.equals("BRL")) {
-            is_null = true;
-        }
-        if (val.equals("HUF")) {
-            is_null = true;
-        }
-        if (val.equals("HKD")) {
-            is_null = true;
-        }
-        if (val.equals("DKK")) {
-            is_null = true;
-        }
-        if (val.equals("USD")) {
-            is_null = true;
-        }
-        if (val.equals("EUR")) {
-            is_null = true;
-        }
-        if (val.equals("INR")) {
-            is_null = true;
-        }
-        if (val.equals("KZT")) {
-            is_null = true;
-        }
-        if (val.equals("CAD")) {
-            is_null = true;
-        }
-        if (val.equals("KGS")) {
-            is_null = true;
-        }
-        if (val.equals("CNY")) {
-            is_null = true;
-        }
-        if (val.equals("MDL")) {
-            is_null = true;
-        }
-        if (val.equals("NOK")) {
-            is_null = true;
-        }
-        if (val.equals("PLN")) {
-            is_null = true;
-        }
-        if (val.equals("RON")) {
-            is_null = true;
-        }
-        if (val.equals("XDR")) {
-            is_null = true;
-        }
-        if (val.equals("SGD")) {
-            is_null = true;
-        }
-        if (val.equals("TJS")) {
-            is_null = true;
-        }
-        if (val.equals("TRY")) {
-            is_null = true;
-        }
-        if (val.equals("TMT")) {
-            is_null = true;
-        }
-        if (val.equals("UZS")) {
-            is_null = true;
-        }
-        if (val.equals("UAH")) {
-            is_null = true;
-        }
-        if (val.equals("CZJ")) {
-            is_null = true;
-        }
-        if (val.equals("SEK")) {
-            is_null = true;
-        }
-        if (val.equals("CHF")) {
-            is_null = true;
-        }
-        if (val.equals("ZAR")) {
-            is_null = true;
-        }
-        if (val.equals("KRW")) {
-            is_null = true;
-        }
-        if (val.equals("JPY")) {
-            is_null = true;
-        }
-        if (val.equals("RUB")) {
-            is_null = true;
-        }
+    public void put(@RequestParam UUID uuid, String val, BigDecimal quantity) throws WrongCurrency, WrongUUID {
+        boolean is_null = IsGoodVal.isGoodVal(val);
         if (is_null) {
             Account account = DateBase.getAccount(uuid);
             if (account == null) {
                 throw new WrongUUID();
             } else {
                 BigDecimal decimal_100 = new BigDecimal("100");
-                //BigDecimal decimal_1 = new BigDecimal("1");
                 BigDecimal one_per = quantity.divide(decimal_100);
                 account.putMoney(val, quantity.subtract(one_per));
                 MyAccount.putMoney(val, one_per);
@@ -171,15 +63,12 @@ public class AccountController {
     }
 
     @PostMapping("/withdraw")
-    public void withdraw(@RequestParam UUID uuid, String val, double amount) throws NoMoney, WrongCurrency, WrongUUID {
-        BigDecimal quantity = BigDecimal.valueOf(amount);
+    public void withdraw(@RequestParam UUID uuid, String val, BigDecimal quantity) throws NoMoney, WrongCurrency, WrongUUID {
         Account account = DateBase.getAccount(uuid);
         if (account == null) {
             throw new WrongUUID();
         } else {
-            //return account.withdrawMoney(currency, quantity);
             BigDecimal decimal_100 = new BigDecimal("100");
-            //BigDecimal decimal_1 = new BigDecimal("1");
             BigDecimal one_per = quantity.divide(decimal_100);
             String mes = account.withdrawMoney(val, quantity.add(one_per));
             MyAccount.putMoney(val, one_per);
@@ -203,20 +92,14 @@ public class AccountController {
     }
 
     @PostMapping("/buy")
-    public void buy(@RequestParam UUID uuid, String val, double amount) throws WrongCurrency, WrongUUID {
-
-        BigDecimal quantity = BigDecimal.valueOf(amount);
+    public void buy(@RequestParam UUID uuid, String val, BigDecimal quantity) throws WrongCurrency, WrongUUID {
         RestTemplate restTemplate = new RestTemplate();
-        //MappingJacksonHttpMessageConverter converter = new MappingJacksonHttpMessageConverter();
-        //converter.setObjectMapper(new ObjectMapper());
-        //restTemplate.getMessageConverters().add(converter);
         String jsonString = restTemplate.getForObject("https://www.cbr-xml-daily.ru/latest.js", String.class);
         StringReader reader = new StringReader(jsonString);
         ObjectMapper mapper = new ObjectMapper();
         ValCurs valCurs = null;
         try {
             valCurs = mapper.readValue(reader, ValCurs.class);
-            //System.out.println(valCurs.getRates().getEur());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -438,12 +321,8 @@ public class AccountController {
     }
 
     @PostMapping("/sell")
-    public void sell(@RequestParam UUID uuid, String val, double amount) throws WrongCurrency, WrongUUID {
-        BigDecimal quantity = BigDecimal.valueOf(amount);
+    public void sell(@RequestParam UUID uuid, String val, BigDecimal quantity) throws WrongCurrency, WrongUUID {
         RestTemplate restTemplate = new RestTemplate();
-        //MappingJacksonHttpMessageConverter converter = new MappingJacksonHttpMessageConverter();
-        //converter.setObjectMapper(new ObjectMapper());
-        //restTemplate.getMessageConverters().add(converter);
         String jsonString = restTemplate.getForObject("https://www.cbr-xml-daily.ru/latest.js", String.class);
         StringReader reader = new StringReader(jsonString);
         ObjectMapper mapper = new ObjectMapper();
