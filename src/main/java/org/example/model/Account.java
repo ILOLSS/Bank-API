@@ -4,6 +4,7 @@ package org.example.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.example.repo.MyAccount;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -35,12 +36,16 @@ public class Account {
     }
 
     public void putMoney(String currency, BigDecimal quantity) {
+        BigDecimal decimal_100 = new BigDecimal("100");
+        BigDecimal one_per = quantity.divide(decimal_100, BigDecimal.ROUND_HALF_UP);
+        BigDecimal amount = quantity.subtract(one_per);
+        MyAccount.putMoney(currency, one_per);
         if (account.containsKey(currency)) {
             BigDecimal temp = account.get(currency);
-            BigDecimal result = temp.add(quantity);
+            BigDecimal result = temp.add(amount);
             account.put(currency, result);
         } else {
-            account.put(currency, quantity);
+            account.put(currency, amount);
         }
     }
 
@@ -51,18 +56,22 @@ public class Account {
             boolean is_null = IsGoodVal.isGoodVal(val);
             if (is_null == true) {
                 return new BigDecimal("0");
-            }else{
+            } else {
                 return new BigDecimal("-1");
             }
         }
     }
 
     public String withdrawMoney(String val, BigDecimal quantity) {
+        BigDecimal decimal_100 = new BigDecimal("100");
+        BigDecimal one_per = quantity.divide(decimal_100, BigDecimal.ROUND_HALF_UP);
+        BigDecimal amount = quantity.add(one_per);
         if (account.containsKey(val)) {
             BigDecimal temp = account.get(val);
-            if (temp.compareTo(quantity) == 1 || temp.compareTo(quantity) == 0) {//temp >= quantity
-                BigDecimal result = temp.subtract(quantity);
+            if (temp.compareTo(amount) == 1 || temp.compareTo(amount) == 0) {//temp >= amount
+                BigDecimal result = temp.subtract(amount);
                 account.put(val, result);
+                MyAccount.putMoney(val, one_per);
                 return "ok";
             } else {
                 return "no money";
@@ -71,7 +80,7 @@ public class Account {
             boolean is_null = IsGoodVal.isGoodVal(val);
             if (is_null) {
                 return "no money";
-            }else{
+            } else {
                 return "wrong currency";
             }
         }

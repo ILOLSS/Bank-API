@@ -51,10 +51,7 @@ public class AccountController {
             if (account == null) {
                 throw new WrongUUID();
             } else {
-                BigDecimal decimal_100 = new BigDecimal("100");
-                BigDecimal one_per = quantity.divide(decimal_100);
-                account.putMoney(val, quantity.subtract(one_per));
-                MyAccount.putMoney(val, one_per);
+                account.putMoney(val, quantity);
             }
         } else {
             throw new WrongCurrency();
@@ -68,10 +65,7 @@ public class AccountController {
         if (account == null) {
             throw new WrongUUID();
         } else {
-            BigDecimal decimal_100 = new BigDecimal("100");
-            BigDecimal one_per = quantity.divide(decimal_100);
-            String mes = account.withdrawMoney(val, quantity.add(one_per));
-            MyAccount.putMoney(val, one_per);
+            String mes = account.withdrawMoney(val, quantity);
             if (mes == "no money") {
                 throw new NoMoney();
             }
