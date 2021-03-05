@@ -112,205 +112,205 @@ public class AccountController {
             boolean is_ex = true;
             if (val.equals("AUD")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getAud());
+                BigDecimal curs = temp.divide(valCurs.getRates().getAud(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("AZN")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getAzn());
+                BigDecimal curs = temp.divide(valCurs.getRates().getAzn(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("GBP")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getGbp());
+                BigDecimal curs = temp.divide(valCurs.getRates().getGbp(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("AMD")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getAmd());
+                BigDecimal curs = temp.divide(valCurs.getRates().getAmd(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("BYN")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getByn());
+                BigDecimal curs = temp.divide(valCurs.getRates().getByn(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("BGN")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getBgn());
+                BigDecimal curs = temp.divide(valCurs.getRates().getBgn(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("BRL")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getBrl());
+                BigDecimal curs = temp.divide(valCurs.getRates().getBrl(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("HUF")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getHuf());
+                BigDecimal curs = temp.divide(valCurs.getRates().getHuf(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("HKD")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getHkd());
+                BigDecimal curs = temp.divide(valCurs.getRates().getHkd(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("DKK")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getDkk());
+                BigDecimal curs = temp.divide(valCurs.getRates().getDkk(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("USD")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getUsd());
+                BigDecimal curs = temp.divide(valCurs.getRates().getUsd(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("EUR")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getEur());
+                BigDecimal curs = temp.divide(valCurs.getRates().getEur(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("INR")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getInr());
+                BigDecimal curs = temp.divide(valCurs.getRates().getInr(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("KZT")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getKzt());
+                BigDecimal curs = temp.divide(valCurs.getRates().getKzt(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("CAD")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getCad());
+                BigDecimal curs = temp.divide(valCurs.getRates().getCad(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("KGS")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getKgs());
+                BigDecimal curs = temp.divide(valCurs.getRates().getKgs(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("CNY")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getCny());
+                BigDecimal curs = temp.divide(valCurs.getRates().getCny(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("MDL")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getMdl());
+                BigDecimal curs = temp.divide(valCurs.getRates().getMdl(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("NOK")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getNok());
+                BigDecimal curs = temp.divide(valCurs.getRates().getNok(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("PLN")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getPln());
+                BigDecimal curs = temp.divide(valCurs.getRates().getPln(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("RON")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getRon());
+                BigDecimal curs = temp.divide(valCurs.getRates().getRon(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("XDR")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getXdr());
+                BigDecimal curs = temp.divide(valCurs.getRates().getXdr(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("SGD")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getSgd());
+                BigDecimal curs = temp.divide(valCurs.getRates().getSgd(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("TJS")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getTjs());
+                BigDecimal curs = temp.divide(valCurs.getRates().getTjs(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("TRY")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getTry());
+                BigDecimal curs = temp.divide(valCurs.getRates().getTry(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("TMT")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getTmt());
+                BigDecimal curs = temp.divide(valCurs.getRates().getTmt(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("UZS")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getUzs());
+                BigDecimal curs = temp.divide(valCurs.getRates().getUzs(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("UAH")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getUah());
+                BigDecimal curs = temp.divide(valCurs.getRates().getUah(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("CZJ")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getCzj());
+                BigDecimal curs = temp.divide(valCurs.getRates().getCzj(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("SEK")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getSek());
+                BigDecimal curs = temp.divide(valCurs.getRates().getSek(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("CHF")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getChf());
+                BigDecimal curs = temp.divide(valCurs.getRates().getChf(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("ZAR")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getZar());
+                BigDecimal curs = temp.divide(valCurs.getRates().getZar(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("KRW")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getKrw());
+                BigDecimal curs = temp.divide(valCurs.getRates().getKrw(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
             if (val.equals("JPY")) {
                 BigDecimal temp = new BigDecimal("1");
-                BigDecimal curs = temp.divide(valCurs.getRates().getJpy());
+                BigDecimal curs = temp.divide(valCurs.getRates().getJpy(),BigDecimal.ROUND_HALF_UP);
                 message = account.withdrawMoney("RUB", quantity.multiply(curs));
                 is_ex = false;
             }
@@ -345,172 +345,172 @@ public class AccountController {
                 boolean is_ex = true;
                 if (val.equals("AUD")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getAud());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getAud(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("AZN")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getAzn());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getAzn(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("GBP")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getGbp());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getGbp(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("AMD")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getAmd());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getAmd(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("BYN")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getByn());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getByn(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("BGN")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getBgn());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getBgn(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("BRL")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getBrl());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getBrl(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("HUF")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getHuf());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getHuf(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("HKD")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getHkd());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getHkd(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("DKK")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getDkk());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getDkk(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("USD")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getUsd());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getUsd(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("EUR")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getEur());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getEur(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("INR")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getInr());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getInr(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("KZT")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getKzt());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getKzt(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("CAD")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getCad());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getCad(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("KGS")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getKgs());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getKgs(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("CNY")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getCny());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getCny(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("MDL")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getMdl());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getMdl(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("NOK")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getNok());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getNok(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("PLN")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getPln());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getPln(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("RON")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getRon());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getRon(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("XDR")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getXdr());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getXdr(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("SGD")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getSgd());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getSgd(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("TJS")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getTjs());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getTjs(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("TRY")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getTry());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getTry(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("TMT")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getTmt());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getTmt(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("UZS")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getUzs());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getUzs(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("UAH")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getUah());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getUah(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("CZJ")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getCzj());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getCzj(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("SEK")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getSek());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getSek(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("CHF")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getChf());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getChf(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("ZAR")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getZar());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getZar(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("KRW")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getKrw());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getKrw(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
                 if (val.equals("JPY")) {
                     BigDecimal temp = new BigDecimal("1");
-                    BigDecimal curs = temp.divide(valCurs.getRates().getJpy());
+                    BigDecimal curs = temp.divide(valCurs.getRates().getJpy(),BigDecimal.ROUND_HALF_UP);
                     account.putMoney("RUB", quantity.multiply(curs));
                 }
             }else{
