@@ -10,7 +10,7 @@ It is GET request. Params: uuid.\
 Response is JSON of account with requested uuid.\
 Example: `/getAccount?uuid=0fb388bc-4a46-4da4-8d57-81066a2fc3a4`
 ### /balance
-It is GET request. Params: uuid, val.\ 
+It is GET request. Params: uuid, val.\
 Response is amount requested currency.\
 Example: `/balance?uuid=0fb388bc-4a46-4da4-8d57-81066a2fc3a4&val=USD`
 ### /put
